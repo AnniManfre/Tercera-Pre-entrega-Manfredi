@@ -1,0 +1,16 @@
+{% extends 'AppAnni/base.html' %}
+
+{% block title %}Resultados de Búsqueda{% endblock %}
+
+{% block content %}
+<h2>Resultados de Búsqueda</h2>
+{% if resultados %}
+    <ul>
+        {% for pelicula in resultados %}
+            <li>Película: {{ pelicula.titulo }} |  Año: {{ pelicula.anio }} | Genero: {{ pelicula.genero }} | Actor: {{ pelicula.actor }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No se encontraron resultados para tu búsqueda.</p>
+{% endif %}
+{% endblock %}

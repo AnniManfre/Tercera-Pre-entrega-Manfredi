@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AppAnni{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>La web para los amantes del cine!</h1>
+        <nav>
+            <a href="{% url 'agregar_actor' %}">Agregar Actor</a> |
+            <a href="{% url 'agregar_genero' %}">Agregar Género</a> |
+            <a href="{% url 'agregar_pelicula' %}">Agregar Película</a> |
+            <a href="{% url 'buscar_pelicula' %}">Buscar Película</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

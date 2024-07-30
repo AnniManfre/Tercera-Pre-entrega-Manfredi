@@ -1,0 +1,12 @@
+{% extends 'AppAnni/base.html' %}
+
+{% block title %}Agregar Actor{% endblock %}
+
+{% block content %}
+<h2>Agregar Actor</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}
